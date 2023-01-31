@@ -67,7 +67,6 @@ class DatabaseConnection {
         Scanner input=new Scanner(System.in);
 
         while(true) {
-            try {
                 LOGGER.info("\n1.Connetion to DataBase\n2.new Connection\n3.Close All Connection\n4.View Status\n5.Exit\nEnter the Choice:");
                 int key = input.nextInt();
                 int temp = 0;
@@ -86,13 +85,6 @@ class DatabaseConnection {
                 if (temp == 1) {
                     break;
                 }
-
-            }
-            catch (Exception e) {
-                String value = "Please Enter Valid Numbers:" + e;
-                LOGGER.info(value);
-                input.nextLine();
-            }
         }
 
     }
